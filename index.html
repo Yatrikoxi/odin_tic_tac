@@ -11,11 +11,32 @@
     <link rel="font" href="fonts/RocketRinder-yV5d.ttf" />
   </head>
   <body>
-    <div class="headerDiv"><h1 class="mainHeader glow">TIC TAC TOE</h1></div>
+    <div class="headerDiv"><h1 class="mainHeader glowBox">TIC TAC TOE</h1></div>
     <div class="gameStartDiv">
-      <div class="gameStartBox">
-        <h2>TIC TAC TOE</h2>
-        <p class="playerInformation">Please enter your name bellow.</p>
+      <div class="gameStartBox glowBox">
+        <h2>ready to play?</h2>
+        <p class="playerInformation">Please enter your names below</p>
+        <form>
+          <label for="playerOne" class="playerInformation">Player X</label>
+          <input
+            type="text"
+            placeholder="player one"
+            autocomplete="off"
+            maxlength="20"
+            id="playerOne"
+            required
+          />
+          <label for="playerTwo" class="playerInformation">Player O</label>
+          <input
+            type="text"
+            placeholder="player two"
+            autocomplete="off"
+            maxlength="20"
+            id="playerTwo"
+            required
+          />
+          <button type="submit" id="submitBtn" class="largeBtn">START</button>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>
