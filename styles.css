@@ -1,0 +1,102 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+    font-family: "Discus-2nmK";
+    src: url(/fonts/Discus-2nmK.ttf) format('truetype');
+}
+@font-face {
+    font-family: "RocketRinder-yV5d";
+    src: url(fonts/RocketRinder-yV5d.ttf) format('truetype');
+}
+/* content */
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+.headerDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.mainHeader {
+    color: #7DFDFE;
+    font-family: "Discus-2nmK";
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    cursor: default;
+}
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 0px #fff, 0 0 2px #7dfefe93, 0 0 3px #7DFDFE, 0 0 3px #7DFDFE;
+    }
+    to {
+      text-shadow: 0 0 2px #7DFDFE, 0 0 4px #7DFDFE, 0 0 6px #7DFDFE;
+    }
+  }
+
+.gameStartDiv{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameStartBox {
+    width: 30rem;
+    height: 30rem;
+    background-color: rgb(0, 0, 0);
+    border: 2px #7DFDFE solid;
+    border-radius: 10px;
+    top: 50%;
+    left: auto;
+    /* transform: translate(-50%, -50%) scale(0.1); */
+    /* visibility: hidden; */
+    color: white;
+    z-index: 5;
+    transition: transform 0.4s, top 0.4s;
+}
