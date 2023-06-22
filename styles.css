@@ -41,7 +41,7 @@ table {
 	border-spacing: 0;
 }
 @font-face {
-    font-family: "Bebas-Neue";
+    font-family: "Bebas-Neue-Regular";
     src: url(fonts/BebasNeue-Regular.ttf) format('truetype');
 }
 @font-face {
@@ -109,7 +109,7 @@ body {
     z-index: 5;
 }
 h2 {
-  font-family: "Bebas-Neue";
+  font-family: "Bebas-Neue-Regular";
   color: #7dfefe;
   font-size: 4rem;
   letter-spacing: 5px;
@@ -117,14 +117,14 @@ h2 {
   cursor: default;
 }
 .playerInformation {
-  font-family: "Bebas-Neue";
+  font-family: "Bebas-Neue-Regular";
   font-size: 2rem;
   padding: 2rem;
   text-shadow: 1px 0px #7dfefe8a;
   cursor: default;
 }
 input[type=text] {
-  font-family:  "Bebas-Neue";
+  font-family: "Bebas-Neue-Regular";
   padding: 0.5rem;
   margin: 0.75rem;
   width: 15rem;
@@ -137,7 +137,7 @@ input[type=text] {
   opacity: 0.3;
 }
 .largeBtn {
-  font-family: "Bebas-Neue";
+  font-family: "Bebas-Neue-Regular";
   font-size: 1.5rem;
   padding: 10px;
   border: none;
