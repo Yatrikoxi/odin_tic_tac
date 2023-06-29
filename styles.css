@@ -70,16 +70,16 @@ body {
     border-radius: 10px;
 }
   .glowBox {
-    -webkit-animation: glowBox 1s ease-in-out infinite alternate;
-  -moz-animation: glowBox 1s ease-in-out infinite alternate;
-  animation: glowBox 1s ease-in-out infinite alternate;
+    -webkit-animation: glowBox 2s ease-in-out infinite alternate;
+  -moz-animation: glowBox 2s ease-in-out infinite alternate;
+  animation: glowBox 2s ease-in-out infinite alternate;
 }
   @-webkit-keyframes glowBox {
     from {
       box-shadow: 0 0 0px #fff, 0 0 2px #7dfefe93, 0 0 3px #7DFDFE, 0 0 3px #7DFDFE;
     }
     to {
-      box-shadow: 0 0 6px #7DFDFE, 0 0 9px #7DFDFE, 0 0 15px #7DFDFE;
+      box-shadow: 0 0 6px #7DFDFE, 0 0 9px #7DFDFE, 0 0 12px #7DFDFE;
     }
   }
   /* box with player input */
@@ -103,7 +103,6 @@ body {
     top: 50%;
     left: auto;
     text-align: center;
-    /* transform: translate(-50%, -50%) scale(0.1); */
     visibility: visible;
     color: white;
     z-index: 5;
@@ -153,3 +152,24 @@ input[type=text] {
   cursor: pointer;
 }
 /* playRoster */
+.gameBoard {
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #7DFDFE;
+}
+.gameDiv {
+  width: 33%;
+  height: 33%;
+  border: 1px solid rgba(125,253,254, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 5rem;
+  color: white;
+  font-family: 'Battlest';
+}
+
+
