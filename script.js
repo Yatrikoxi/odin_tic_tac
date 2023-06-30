@@ -1,3 +1,8 @@
+let gameBoard = ["","","","","","","","",""];
+let playerTurn = "X";
+
+
+
 function formGenerator() {
     const containerDiv = document.createElement('div');
     containerDiv.classList.add('gameStartDiv');
@@ -51,12 +56,18 @@ function formGenerator() {
     formButton.setAttribute("id", "submitBtn");
     formButton.textContent = "START";
     formDiv.appendChild(formButton);
+    formButton.addEventListener('click', (e)=> {
+        e.preventDefault();
+        submitButton();
+    });
+    document.addEventListener('keypress', (event) => {
+        if(event.key == "Enter") {submitButton()}
+    })
 
     containerDiv.appendChild(formDiv);
     document.body.appendChild(containerDiv);
 }
-let gameBoard = ["","","","","","","","",""];
-let playerTurn = "X";
+
 
 // formGenerator();
 function gameBoardFunc(gameBoard, playerTurn){
@@ -67,17 +78,27 @@ function gameBoardFunc(gameBoard, playerTurn){
     const gameBoardDiv = document.createElement('div');
     gameBoardDiv.classList.add("gameBoard", "glowBox");
     container.appendChild(gameBoardDiv);
-    
-    gameBoard.forEach((index) => {
+
+    for (let i = 1; i <= gameBoard.length; i++) {
         const div = document.createElement('div');
-        div.id = `${index}`;
+        div.id = `div${i}`;
         div.className = 'gameDiv';
         gameBoardDiv.appendChild(div);
 
         div.addEventListener('click', () => {
-            gameBoard[index] = playerTurn;
+            gameBoard[i] = playerTurn;
             div.textContent = `${playerTurn}`;
-        });
-    })}
-    // formGenerator()
-    gameBoardFunc(gameBoard, playerTurn)
+        })
+    }
+}
+function submitButton() {
+    const playerInputOne = document.getElementById('playerOne');
+    const playerInputTwo = document.getElementById('playerTwo');
+        if (playerInputOne.value == "" || playerInputTwo.value == "") {
+            alert ("Please enter your names")
+        } else {
+        document.body.innerHTML = `<div class="headerDiv"><h1 class="mainHeader glowBox">TIC TAC TOE</h1></div>`;
+        gameBoardFunc(gameBoard, playerTurn);
+        }
+}
+    formGenerator()
